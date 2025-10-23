@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri Video Merah | JAV MURID - Koleksi Video Pilihan</title>
+
+    <!-- Professional SEO and Usability Tags (Ditambahkan Sesuai Permintaan) -->
+    
+    <!-- Meta Description (Deskripsi SEO) -->
+    <meta name="description" content="Tonton koleksi video pilihan terbaru dan trending dari berbagai kategori. Rasakan pengalaman menonton yang bersemangat dengan antarmuka bertema merah yang elegan.">
+    
+    <!-- Theme Color (Warna Tema untuk Browser Mobile, menggunakan merah Red-600) -->
+    <meta name="theme-color" content="#b91c1c"> 
+
+    <!-- Canonical Link (Link Kanonikal - Ganti URL ini dengan URL domain Anda yang sebenarnya) -->
+    <link rel="canonical" href="https://www.example.com/index.html">
+
+    <!-- Favicon (Ikon Tab Browser - Ganti URL/path dengan ikon Anda yang sebenarnya) -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <!-- Open Graph Tags for Social Media (Facebook, LinkedIn) -->
+    <meta property="og:title" content="Galeri Video Merah | JAV MURID">
+    <meta property="og:description" content="Tonton koleksi video pilihan terbaru dan trending dari berbagai kategori.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.example.com/index.html">
+    <meta property="og:image" content="https://www.example.com/thumbnail.jpg"> 
+
+    <!-- Twitter Card Tags for Social Media -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@javmurid">
+    <meta name="twitter:creator" content="@javmurid">
+    <meta name="twitter:title" content="Galeri Video Merah | JAV MURID">
+    <meta name="twitter:description" content="Tonton koleksi video pilihan terbaru dan trending dari berbagai kategori.">
+    <meta name="twitter:image" content="https://www.example.com/thumbnail.jpg">
+
+
+    <!-- Memuat Tailwind CSS CDN untuk styling yang mudah dan responsif -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Menggunakan font Inter */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1a1a1a; /* Latar belakang gelap untuk pengalaman menonton yang baik */
+            color: #ffffff; /* Teks putih */
+        }
+
+        /* Custom CSS untuk efek cahaya (glow) merah saat hover pada kartu video */
+        .video-card {
+            /* Pastikan transisi sudah ada dari Tailwind class */
+            transition: all 0.3s ease-in-out; 
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Bayangan default */
+        }
+
+        .video-card:hover {
+            /* Efek cahaya merah menonjol saat kursor diarahkan */
+            /* Menggunakan warna merah (Red-600: #dc2626) */
+            box-shadow: 
+                0 0 10px rgba(220, 38, 38, 0.8), /* Cahaya lembut di sekitar */
+                0 0 20px rgba(220, 38, 38, 0.6), /* Cahaya sedang */
+                0 0 40px rgba(220, 38, 38, 0.4); /* Cahaya terluar */
+            transform: scale(1.03); /* Sedikit diperbesar agar lebih terasa */
+        }
+
+        /* --- STYLING ANIMASI LOGO "DANGER SWEEP" --- */
+        .logo-animate {
+            position: relative;
+            display: inline-block;
+            overflow: hidden; /* Penting untuk menyembunyikan garis saat bergerak masuk/keluar */
+            line-height: 1; /* Pastikan tinggi konsisten */
+        }
+
+        /* Membuat garis cahaya merah (pseudo-element) */
+        .logo-animate::after {
+            content: '';
+            position: absolute;
+            /* Atur posisi vertikal garis agar berada di tengah logo */
+            top: -5px;
+            bottom: -5px; 
+            width: 40px; /* Lebar garis cahaya */
+            
+            /* Menggunakan box-shadow untuk efek cahaya/glow merah */
+            background: rgba(255, 0, 0, 0); 
+            box-shadow: 0 0 10px 5px rgba(255, 0, 0, 0.9), 0 0 20px 10px rgba(255, 0, 0, 0.7);
+            opacity: 0.7;
+            
+            /* Miringkan garis dan mulai dari luar kiri */
+            transform: translateX(-100%) skewX(-30deg); 
+            animation: danger-sweep 2s infinite cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+            z-index: 10;
+            pointer-events: none;
+        }
+
+        /* Teks logo harus berada di atas animasi */
+        .logo-animate span, .logo-animate {
+            position: relative;
+            z-index: 20; 
+        }
+
+        /* Keyframes untuk pergerakan garis dari kiri ke kanan */
+        @keyframes danger-sweep {
+            0% {
+                transform: translateX(-100%) skewX(-30deg); /* Posisi awal di luar kiri */
+            }
+            100% {
+                /* Bergerak hingga keluar sepenuhnya di kanan */
+                transform: translateX(calc(100% + 150px)) skewX(-30deg); 
+            }
+        }
+        /* --- AKHIR STYLING ANIMASI LOGO --- */
+    </style>
+
+    <!-- Schema.org JSON-LD (WebSite) untuk SEO Struktural -->
+    <!-- Ini memberi tahu mesin pencari bahwa ini adalah sebuah situs web, termasuk kemampuan pencarian internal. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "JAV MURID",
+      "url": "https://www.example.com/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.example.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+</head>
+<body>
+
+    <!-- Header / Navigasi Utama -->
+    <header class="bg-red-800 shadow-xl sticky top-0 z-10">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo dengan Animasi Glow Merah -->
+            <h1 class="text-3xl font-extrabold tracking-tight text-white logo-animate">
+                <span class="text-red-300">JAV</span> MURID
+            </h1>
+            <nav class="space-x-4 hidden sm:block">
+                <a href="#" class="text-white hover:text-red-300 font-medium transition duration-200">Beranda</a>
+                <a href="#" class="text-white hover:text-red-300 font-medium transition duration-200">Trending</a>
+                <a href="#" class="text-white hover:text-red-300 font-medium transition duration-200">Langganan</a>
+            </nav>
+            <!-- Tautan Daftar dan Masuk (Sekarang menggunakan <a> dengan shortlink) -->
+            <div class="flex space-x-3">
+                <a href="#daftar" class="inline-block bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded-lg shadow transition duration-200">
+                    Daftar
+                </a>
+                <a href="#masuk" class="inline-block bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded-lg shadow transition duration-200">
+                    Masuk
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Konten Utama (Kolom Video) -->
+    <main class="container mx-auto px-4 py-8">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-8 border-b-4 border-red-600 pb-2 text-red-500">
+            Pilihan Video Teratas
+        </h2>
+
+        <!-- Grid Layout untuk Kolom Video -->
+        <div id="video-grid" class="grid gap-6 md:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            
+            <!-- Simulasi Kartu Video (Video 1) -->
+            <!-- Kelas hover:scale-[1.02] dan hover:shadow-2xl telah dihilangkan dan diganti dengan style kustom .video-card:hover -->
+            <div class="video-card bg-gray-800 rounded-xl shadow-lg transition duration-300 transform">
+                <div class="relative pb-[56.25%] overflow-hidden rounded-t-xl bg-gray-700">
+                    <!-- Placeholder untuk Video Thumbnail -->
+                    <img src="https://placehold.co/600x337/b91c1c/ffffff?text=Video+01" 
+                         alt="Thumbnail Video 1"
+                         class="absolute inset-0 w-full h-full object-cover">
+                    <span class="absolute bottom-2 right-2 bg-black bg-opacity-70 text-white text-xs font-semibold px-2 py-0.5 rounded-md">15:30</span>
+                </div>
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold mb-1 text-red-400 truncate hover:text-red-300">Cara Membuat Website Keren dengan Merah</h3>
+                    <p class="text-sm text-gray-400">Channel Kreatif • 1.2M ditonton • 2 hari lalu</p>
+                </div>
+            </div>
+
+            <!-- Simulasi Kartu Video (Video 2) -->
+            <div class="video-card bg-gray-800 rounded-xl shadow-lg transition duration-300 transform">
+                <div class="relative pb-[56.25%] overflow-hidden rounded-t-xl bg-gray-700">
+                    <!-- Placeholder untuk Video Thumbnail -->
+                    <img src="https://placehold.co/600x337/b91c1c/ffffff?text=Video+02" 
+                         alt="Thumbnail Video 2"
+                         class="absolute inset-0 w-full h-full object-cover">
+                    <span class="absolute bottom-2 right-2 bg-black bg-opacity-70 text-white text-xs font-semibold px-2 py-0.5 rounded-md">08:45</span>
+                </div>
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold mb-1 text-red-400 truncate hover:text-red-300">Eksplorasi Alam: Danau Merah Misterius</h3>
+                    <p class="text-sm text-gray-400">Petualang Sejati • 500K ditonton • 1 minggu lalu</p>
+                </div>
+            </div>
+
+            <!-- Simulasi Kartu Video (Video 3) -->
+            <div class="video-card bg-gray-800 rounded-xl shadow-lg transition duration-300 transform">
+                <div class="relative pb-[56.25%] overflow-hidden rounded-t-xl bg-gray-700">
+                    <!-- Placeholder untuk Video Thumbnail -->
+                    <img src="https://placehold.co/600x337/b91c1c/ffffff?text=Video+03" 
+                         alt="Thumbnail Video 3"
+                         class="absolute inset-0 w-full h-full object-cover">
+                    <span class="absolute bottom-2 right-2 bg-black bg-opacity-70 text-white text-xs font-semibold px-2 py-0.5 rounded-md">22:01</span>
+                </div>
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold mb-1 text-red-400 truncate hover:text-red-300">Tutorial Desain Grafis: Menguasai Warna Merah</h3>
+                    <p class="text-sm text-gray-400">Guru Desain • 2.1M ditonton • 3 hari lalu</p>
+                </div>
+            </div>
+            
+            <!-- Simulasi Kartu Video (Video 4) -->
+            <div class="video-card bg-gray-800 rounded-xl shadow-lg transition duration-300 transform">
+                <div class="relative pb-[56.25%] overflow-hidden rounded-t-xl bg-gray-700">
+                    <!-- Placeholder untuk Video Thumbnail -->
+                    <img src="https://placehold.co/600x337/b91c1c/ffffff?text=Video+04" 
+                         alt="Thumbnail Video 4"
+                         class="absolute inset-0 w-full h-full object-cover">
+                    <span class="absolute bottom-2 right-2 bg-black bg-opacity-70 text-white text-xs font-semibold px-2 py-0.5 rounded-md">05:10</span>
+                </div>
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold mb-1 text-red-400 truncate hover:text-red-300">Review Film Aksi Terbaru: The Red Line</h3>
+                    <p class="text-sm text-gray-400">Pecinta Film • 890K ditonton • 1 bulan lalu</p>
+                </div>
+            </div>
+
+            <!-- Tambahkan lebih banyak video untuk mengisi grid -->
+            <div class="video-card bg-gray-800 rounded-xl shadow-lg transition duration-300 transform">
+                <div class="relative pb-[56.25%] overflow-hidden rounded-t-xl bg-gray-700">
+                    <img src="https://placehold.co/600x337/b91c1c/ffffff?text=Video+05" alt="Thumbnail Video 5" class="absolute inset-0 w-full h-full object-cover">
+                    <span class="absolute bottom-2 right-2 bg-black bg-opacity-70 text-white text-xs font-semibold px-2 py-0.5 rounded-md">11:55</span>
+                </div>
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold mb-1 text-red-400 truncate hover:text-red-300">Rahasia Fotografi Senja Merah</h3>
+                    <p class="text-sm text-gray-400">Kamera Mania • 345K ditonton • 4 hari lalu</p>
+                </div>
+            </div>
+
+            <div class="video-card bg-gray-800 rounded-xl shadow-lg transition duration-300 transform">
+                <div class="relative pb-[56.25%] overflow-hidden rounded-t-xl bg-gray-700">
+                    <img src="https://placehold.co/600x337/b91c1c/ffffff?text=Video+06" alt="Thumbnail Video 6" class="absolute inset-0 w-full h-full object-cover">
+                    <span class="absolute bottom-2 right-2 bg-black bg-opacity-70 text-white text-xs font-semibold px-2 py-0.5 rounded-md">07:20</span>
+                </div>
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold mb-1 text-red-400 truncate hover:text-red-300">Sejarah Singkat Kerajaan Merah</h3>
+                    <p class="text-sm text-gray-400">Pena Sejarah • 99K ditonton • 2 minggu lalu</p>
+                </div>
+            </div>
+
+            <div class="video-card bg-gray-800 rounded-xl shadow-lg transition duration-300 transform">
+                <div class="relative pb-[56.25%] overflow-hidden rounded-t-xl bg-gray-700">
+                    <img src="https://placehold.co/600x337/b91c1c/ffffff?text=Video+07" alt="Thumbnail Video 7" class="absolute inset-0 w-full h-full object-cover">
+                    <span class="absolute bottom-2 right-2 bg-black bg-opacity-70 text-white text-xs font-semibold px-2 py-0.5 rounded-md">18:00</span>
+                </div>
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold mb-1 text-red-400 truncate hover:text-red-300">Tips Memasak Rendang Pedas (Merah)</h3>
+                    <p class="text-sm text-gray-400">Dapur Bunda • 4.5M ditonton • 6 hari lalu</p>
+                </div>
+            </div>
+
+            <div class="video-card bg-gray-800 rounded-xl shadow-lg transition duration-300 transform">
+                <div class="relative pb-[56.25%] overflow-hidden rounded-t-xl bg-gray-700">
+                    <img src="https://placehold.co/600x337/b91c1c/ffffff?text=Video+08" alt="Thumbnail Video 8" class="absolute inset-0 w-full h-full object-cover">
+                    <span class="absolute bottom-2 right-2 bg-black bg-opacity-70 text-white text-xs font-semibold px-2 py-0.5 rounded-md">09:35</span>
+                </div>
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold mb-1 text-red-400 truncate hover:text-red-300">Pola Hidup Sehat: Efek Buah Naga Merah</h3>
+                    <p class="text-sm text-gray-400">Sehat Selalu • 150K ditonton • 1 bulan lalu</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Tombol Muat Lebih Banyak -->
+        <div class="text-center mt-12">
+            <button class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+                Muat Lebih Banyak Video
+            </button>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-red-900 mt-12 py-6">
+        <div class="container mx-auto px-4 text-center text-gray-300 text-sm">
+            <p>&copy; 2025 JAVmurid. Semua Hak Cipta Dilindungi.</p>
+            <p class="mt-2">Dibuat dengan semangat dan Birahi yang menyala!</p>
+        </div>
+    </footer>
+
+</body>
+</html>
